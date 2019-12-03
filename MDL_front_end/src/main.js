@@ -1,0 +1,19 @@
+import Vue from 'vue'
+import './plugins/vuetify'
+import App from './App.vue'
+import router from './router'
+import Chart from 'v-chart-plugin'
+
+import store from './store'
+import VueResource from 'vue-resource'
+
+Vue.use(Chart);
+Vue.use(VueResource);
+
+Vue.config.productionTip = false
+
+new Vue({
+  router,
+  store,
+  render: h => h(App)
+}).$mount('#app')
